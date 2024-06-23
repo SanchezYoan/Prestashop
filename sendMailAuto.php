@@ -3,7 +3,7 @@ function displayTableContents() {
 
     $dsn = "mysql:host=localhost;dbname=facture";
     $username = "root";
-    $password = "Ardkordu.30";
+    $password = "myPassword";
 
     $directory = 'facture/';
 
