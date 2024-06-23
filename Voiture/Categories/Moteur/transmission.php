@@ -1,41 +1,45 @@
-
-
 <?php
-require "../moteurTransmission.php";
 
-class transmission extends moteurTransmission {
-    private$_volantMoteur;
-    private$_quickShift;
-    private$_coupleCourt;
+class Transmission extends MoteursTransmissions {
+    private $_volantMoteur;
+    private $_quickShift;
+    private $_coupleCourt;
 
-    public function getTransmision() {
+    public function getTransmission() {
         $res = $this->_volantMoteur;
+        echo $res;
         return $res;
     }
+
     public function getQuickShift() {
         $res = $this->_quickShift;
+        echo $res;
         return $res;
     }
+
     public function getCoupleCourt() {
         $res = $this->_coupleCourt;
         return $res;
     }
 
-    public function setTransmision($marques) {
-        $res = $this->_volantMoteur;
-        return $res;
+    public function setTransmission($marques) {
+        $this->_volantMoteur = $marques;
+        return $this->_volantMoteur;
     }
+
     public function setQuickShift($marques) {
-        $res = $this->_quickShift;
-        return $res;
+        $this->_quickShift = $marques;
+        return $this->_quickShift;
     }
+
     public function setCoupleCourt($marques) {
-        $res = $this->_coupleCourt;
-        return $res;
+        $this->_coupleCourt = $marques;
+        return $this->_coupleCourt;
     }
-
-
 }
 
-$moteur->getMarques();
-// $transmission = new transmission();
+function selectMarque() {
+    $res = readline("Choisissez une marque: \n");
+    // $moteur->getMarques();
+}
+// selectMarque();
