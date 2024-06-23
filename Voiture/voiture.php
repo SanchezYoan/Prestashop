@@ -2,7 +2,7 @@
 <?php
 
 class Voiture {
-    private $_marque;
+    // private $_marque;
     private $_modele;
     private $_annee;
     private $_prix;
@@ -11,9 +11,9 @@ class Voiture {
     public function Voiture() {
     }
 
-    public function GetMarque() {
-        return $this->_modele;
-    }
+    // public function GetMarque() {
+    //     return $this->_modele;
+    // }
 
     public function GetModele() {
         return $this->_modele;
@@ -25,9 +25,9 @@ class Voiture {
         return $this->_prix;
     }
 
-    public function SetMarque($uneMarque){
-        $this->_marque = $uneMarque;
-    }
+    // public function SetMarque($uneMarque){
+    //     $this->_marque = $uneMarque;
+    // }
     public function SetModele($unModele){
         $this->_modele = $unModele;
     }
