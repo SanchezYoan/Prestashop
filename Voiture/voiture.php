@@ -41,10 +41,10 @@ class Voiture {
 }
 
 
-$maVoiture = new Voiture();
-$maVoiture->SetMarque("Mercedes");
-$maVoiture->SetModele("Classe A 4 Berline");
-$maVoiture->SetAnnee("2022");
-$maVoiture->SetPrix("35000 €");
+// $maVoiture = new Voiture();
+// $maVoiture->SetMarque("Mercedes");
+// $maVoiture->SetModele("Classe A 4 Berline");
+// $maVoiture->SetAnnee("2022");
+// $maVoiture->SetPrix("35000 €");
 
-var_dump($maVoiture);
+// var_dump($maVoiture);

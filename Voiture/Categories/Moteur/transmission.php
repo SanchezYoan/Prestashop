@@ -1,16 +1,41 @@
 
 
 <?php
-require_once "voiture.php";
+require "../moteurTransmission.php";
 
-class transmission extends Voiture {
-    
-    public function suceumabite() {
-        $res = $this->_modele;
+class transmission extends moteurTransmission {
+    private$_volantMoteur;
+    private$_quickShift;
+    private$_coupleCourt;
+
+    public function getTransmision() {
+        $res = $this->_volantMoteur;
         return $res;
     }
+    public function getQuickShift() {
+        $res = $this->_quickShift;
+        return $res;
+    }
+    public function getCoupleCourt() {
+        $res = $this->_coupleCourt;
+        return $res;
+    }
+
+    public function setTransmision($marques) {
+        $res = $this->_volantMoteur;
+        return $res;
+    }
+    public function setQuickShift($marques) {
+        $res = $this->_quickShift;
+        return $res;
+    }
+    public function setCoupleCourt($marques) {
+        $res = $this->_coupleCourt;
+        return $res;
+    }
+
+
 }
 
-$result = new moteur();
-
-echo $result->suceumabite();
+$moteur->getMarques();
+// $transmission = new transmission();
