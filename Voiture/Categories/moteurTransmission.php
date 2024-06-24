@@ -28,60 +28,58 @@ function choiceProduct() {
 
 
 class Transmission extends MoteursTransmissions {
-    private $_volantMoteur;
-    private $_quickShift;
-    private $_coupleCourt;
+    private $_typeOfProduct;
     private $_selectedMarque;
 
     public function getTransmission() {
-        $res = $this->_volantMoteur;
+        $res = $this->$_typeOfProduct;
         echo $res;
         return $res;
     }
 
     public function getQuickShift() {
-        $res = $this->_quickShift;
+        $res = $this->$_typeOfProduct;
         echo $res;
         return $res;
     }
 
     public function getCoupleCourt() {
-        $res = $this->_coupleCourt;
+        $res = $this->$_typeOfProduct;
         return $res;
     }
 
 
-    public function setTransmission() {
-        $this->_volantMoteur = $this->_selectedMarque ;
-        echo "Un volantMoteur de la marque  $this->_selectedMarque à été ajouté\n";
+    public function setTransmission(string $typeOfProduct) {
+        $this->$_typeOfProduct = $typeOfProduct;
+        echo "Un $this->_typeOfProduct de la marque  $this->_selectedMarque à été ajouté\n";
         mail(
             "yoan30470@hotmail.fr",
             "Ajout de produit",
-            "Un nouveau produit a été ajouté",
+            "Un nouveau produit $this->_typeOfProduct a été ajouté",
         );
         echo "Mail envoyé à l'Admin";
         return $this->_volantMoteur;
     }
 
-    public function setQuickShift() {
-        $this->_quickShift = $this->_selectedMarque ;
-        echo "Un quick shift de la marque $this->_selectedMarque à été ajouté\n";
+    public function setQuickShift(string $typeOfProduct) {
+        $this->_quickShift = $this->_typeOfProduct ;
+        echo "Un $this->_typeOfProduct de la marque $this->_selectedMarque à été ajouté\n";
         mail(
             "yoan30470@hotmail.fr",
             "Ajout de produit",
-            "Un nouveau produit a été ajouté",
+            "Un nouveau produit $this->_typeOfProduct a été ajouté",
         );
         echo "Mail envoyé à l'Admin";
         return $this->_quickShift;
     }
 
-    public function setCoupleCourt() {
-        $this->_coupleCourt = $this->_selectedMarque ;
-        echo "Un couple court de la marque  $this->_selectedMarque à été ajouté\n";
+    public function setCoupleCourt(string $typeOfProduct) {
+        $this->_coupleCourt = $this->_typeOfProduct ;
+        echo "Un $this->_typeOfProduct de la marque  $this->_selectedMarque à été ajouté\n";
         mail(
             "yoan30470@hotmail.fr",
             "Ajout de produit",
-            "Un nouveau produit a été ajouté",
+            "Un nouveau produit $this->_typeOfProduct a été ajouté",
         );
         echo "Mail envoyé à l'Admin";
         return $this->_coupleCourt;
@@ -105,13 +103,13 @@ function addProduct() {
     switch ($response) {
         case "1":
             $volantMoteur = new Transmission();
-            $volantMoteur->setTransmission();
+            $volantMoteur->setTransmission("volant moteur");
         case "2":
             $quickShift = new Transmission();
-            $quickShift->setQuickShift();
+            $quickShift->setQuickShift("quick shift");
         case "3":
             $coupleCourt = new Transmission();
-            $coupleCourt->setCoupleCourt();
+            $coupleCourt->setCoupleCourt("couple court");
         default:
             // echo "commande non reconnue";
             return null;
