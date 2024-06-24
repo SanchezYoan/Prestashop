@@ -12,7 +12,7 @@ function displayTableContents() {
         $directory = './facture/';
         
         // Nom du fichier 
-        $filename = $name
+        $filename = $name;
         
         $filepath = $directory . $filename;
         
