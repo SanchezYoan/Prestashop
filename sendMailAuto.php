@@ -55,12 +55,12 @@ try {
                 
                 
                 if ($time === "11:59:59") {
-                    foreach($row['CDECENT_DTECDE'] === $today) {
+                    if ($row["CDECENT_DTECDE"] === $today) {
                         mail(
                             $row["ADRESSEP_EMAIL"],
                             "Facture N°" . $row["CDECENT_NOFAC"],
-                            download();
-                        )
+                            download()
+                        );
                     }
                 }
               
