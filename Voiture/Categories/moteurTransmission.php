@@ -104,11 +104,14 @@ function addProduct() {
 
     switch ($response) {
         case "1":
-            $transmission->setTransmission();
+            $volantMoteur = new Transmission();
+            $volantMoteur->setTransmission();
         case "2":
-            $transmission->setQuickShift();
+            $quickShift = new Transmission();
+            $quickShift->setQuickShift();
         case "3":
-            $transmission->setCoupleCourt();
+            $coupleCourt = new Transmission();
+            $coupleCourt->setCoupleCourt();
         default:
             // echo "commande non reconnue";
             return null;
